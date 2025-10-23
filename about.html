@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About AstraLux – Our Story</title>
+  <meta name="description" content="Discover the story, values, and people behind AstraLux. Premium craft, human-centered design, and relentless pursuit of excellence." />
+  <meta property="og:title" content="AstraLux – About Our Story" />
+  <meta property="og:description" content="Learn how AstraLux blends luxury, innovation, and trust into premium devices designed for real life." />
+  <meta property="og:image" content="https://cdn.astralux.com/og-about.jpg" />
+  <meta name="theme-color" content="#0B3D91" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#0B3D91',
+              50: '#e6f0ff',
+              100: '#cfe0ff',
+              200: '#97ccff',
+              300: '#5dbbff',
+              400: '#2da0ff',
+              500: '#0B3D91',
+              600: '#0A3578',
+              700: '#092658',
+              800: '#061733',
+              900: '#030d1a'
+            },
+            secondary: {
+              DEFAULT: '#1D2A60'
+            },
+            neutral: {
+              900: '#0f1115',
+              800: '#1f2937',
+              700: '#374151',
+              600: '#4b5563',
+              500: '#6b7280',
+              400: '#9ca3af',
+              300: '#d1d5db',
+              100: '#f3f4f6'
+            }
+          },
+          fontFamily: {
+            display: ['Inter', 'system-ui', 'sans-serif'],
+            heading: ['Inter', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif']
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            gradientShift: {
+              '0%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+              '100%': { backgroundPosition: '0% 50%' }
+            }
+          },
+          animation: {
+            'fade-in-up': 'fadeInUp 0.8s ease-out',
+            'gradient-shift': 'gradientShift 3s ease infinite'
+          }
+        }
+      },
+      darkMode: 'class'
+    }
+  </script>
+</head>
+<body class="bg-neutral-50 text-neutral-900">
+  <!-- Accessibility -->
+  <a href="#content" class="sr-only focus:not-sr-only absolute left-4 top-4 p-2 bg-primary text-white rounded" aria-label="Skip to content">Skip to content</a>
+
+  <!-- Navbar -->
+  <header class="fixed w-full z-40" aria-label="Main navigation">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between bg-white/90 backdrop-blur-md shadow-md">
+      <a href="index.html" class="text-2xl font-display font-bold">AstraLux</a>
+      <div class="hidden md:flex items-center gap-8 text-sm">
+        <a href="index.html" class="text-neutral-700 hover:text-primary">Home</a>
+        <a href="#story" class="text-neutral-700 hover:text-primary">Our Story</a>
+        <a href="#team" class="text-neutral-700 hover:text-primary">Team</a>
+        <a href="#contact" class="bg-primary text-white px-4 py-2 rounded-full">Contact</a>
+      </div>
+      <button id="mobile-menu-btn-about" class="md:hidden w-8 h-8 flex flex-col justify-between" aria-label="Open menu">
+        <span class="block h-0.5 bg-current"></span>
+        <span class="block h-0.5 bg-current"></span>
+        <span class="block h-0.5 bg-current"></span>
+      </button>
+    </nav>
+  </header>
+  <div id="mobile-drawer-about" class="md:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-40" aria-label="Mobile navigation drawer">
+    <div class="p-6 space-y-4">
+      <a href="#story" class="block text-neutral-700 hover:text-primary">Our Story</a>
+      <a href="#team" class="block text-neutral-700 hover:text-primary">Team</a>
+      <a href="#contact" class="block text-neutral-700 hover:text-primary">Contact</a>
+    </div>
+  </div>
+  <div id="drawer-overlay-about" class="md:hidden fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true"></div>
+
+  <main id="content" class="pt-28">
+    <!-- HERO: About hero -->
+    <section id="about-hero" aria-label="About AstraLux" class="relative bg-gradient-to-br from-primary/90 to-secondary/90 text-white">
+      <div class="absolute inset-0 opacity-60" style="background-image: radial-gradient(circle at 20% 0, rgba(255,255,255,.15), transparent 40%), radial-gradient(circle at 100% 100%, rgba(0,0,0,.25), transparent 40%); mix-blend-mode: screen;"></div>
+      <div class="relative z-10 max-w-5xl mx-auto px-6 py-20 md:py-40 text-center">
+        <h1 class="text-4xl md:text-5xl font-display font-bold mb-4">Our Story</h1>
+        <p class="text-lg md:text-xl text-white/90">AstraLux began with a belief: premium tech deserves to feel effortless, personal, and trustworthy. We obsess over every micro-interaction, surface, and decision so that luxury is a frictionless experience.</p>
+      </div>
+    </section>
+
+    <!-- STORY + VALUES -->
+    <section id="story" aria-label="Our story" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-4">
+          <h2 class="text-3xl font-heading font-bold">Crafted for real life</h2>
+          <p class="text-neutral-700">AstraLux devices fuse patina-luxe aesthetics with kinetic refinement. Every curve, texture, and glow is designed to feel personal—like a device that understands you before you even say a word.</p>
+          <p class="text-neutral-700">We pair world-class hardware with thoughtful software so you get beauty, performance, and reliability in equal measure.</p>
+        </div>
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l9 4-9 4-9-4 9-4z"/><path d="M3 11l9 4 9-4" opacity=".6"/></svg>
+            </div>
+            <div>
+              <strong>Design first</strong>
+              <div class="text-sm text-neutral-600">Aesthetic cues that feel tactile and earned, not showy.</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l9 4-9 4-9-4 9-4z"/></svg>
+            </div>
+            <div>
+              <strong>Trust & support</strong>
+              <div class="text-sm text-neutral-600">Long-term reliability with robust after-sales service.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" aria-label="Meet the AstraLux team" class="py-20 bg-neutral-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-center mb-6">Meet the AstraLux Team</h2>
+        <p class="text-center text-neutral-600 mb-12">A small, fearless crew of designers, engineers, and storytellers united by curiosity and care.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Member 1 -->
+          <figure class="text-center bg-white rounded-2xl p-6 shadow-md">
+            <img src="https://cdn.astralux.com/team/jordan.jpg" alt="Jordan Lee - Chief Design Officer" class="w-24 h-24 rounded-full mx-auto mb-3 object-cover" />
+            <figcaption>
+              <strong>Jordan Lee</strong><br/>
+              <span class="text-sm text-neutral-600">Chief Design Officer</span>
+            </figcaption>
+          </figure>
+          <!-- Member 2 -->
+          <figure class="text-center bg-white rounded-2xl p-6 shadow-md">
+            <img src="https://cdn.astralux.com/team/mia.jpg" alt="Mia Chen - Chief Technology Officer" class="w-24 h-24 rounded-full mx-auto mb-3 object-cover" />
+            <figcaption>
+              <strong>Mia Chen</strong><br/>
+              <span class="text-sm text-neutral-600">Chief Technology Officer</span>
+            </figcaption>
+          </figure>
+          <!-- Member 3 -->
+          <figure class="text-center bg-white rounded-2xl p-6 shadow-md">
+            <img src="https://cdn.astralux.com/team/leo.jpg" alt="Leo Martins - Head of Experience" class="w-24 h-24 rounded-full mx-auto mb-3 object-cover" />
+            <figcaption>
+              <strong>Leo Martins</strong><br/>
+              <span class="text-sm text-neutral-600">Head of Experience</span>
+            </figcaption>
+          </figure>
+          <!-- Member 4 -->
+          <figure class="text-center bg-white rounded-2xl p-6 shadow-md">
+            <img src="https://cdn.astralux.com/team/sara.jpg" alt="Sara Kim - VP, Product" class="w-24 h-24 rounded-full mx-auto mb-3 object-cover" />
+            <figcaption>
+              <strong>Sara Kim</strong><br/>
+              <span class="text-sm text-neutral-600">VP, Product</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER (same style as index for consistency) -->
+    <footer class="bg-neutral-900 text-white pt-12 pb-6" aria-label="Site footer">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h4 class="text-lg font-semibold mb-2">AstraLux</h4>
+          <p class="text-neutral-400 text-sm">Premium, design-forward devices built for real life with extraordinary performance.</p>
+        </div>
+        <div>
+          <h5 class="font-semibold mb-2">Support</h5>
+          <ul class="text-sm space-y-2 text-neutral-400">
+            <li><a href="#contact" class="hover:text-white">Contact</a></li>
+            <li><a href="#signup" class="hover:text-white">Get Started</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-semibold mb-2">Follow</h5>
+          <div class="flex space-x-3">
+            <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-neutral-700 flex items-center justify-center"><span class="sr-only">IG</span></a>
+            <a href="#" aria-label="Twitter" class="w-9 h-9 rounded-full bg-neutral-700 flex items-center justify-center"><span class="sr-only">TW</span></a>
+            <a href="#" aria-label="YouTube" class="w-9 h-9 rounded-full bg-neutral-700 flex items-center justify-center"><span class="sr-only">YT</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-neutral-700 mt-6 pt-4 text-center text-neutral-400 text-sm">© 2025 AstraLux. All rights reserved.</div>
+    </footer>
+  </main>
+
+  <!-- Structured Data: Organization / LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Organization", "LocalBusiness"],
+    "name": "AstraLux",
+    "url": "https://www.astralux.com/",
+    "logo": "https://cdn.astralux.com/logo.png",
+    "description": "Premium, design-forward technology blending extraordinary performance with human-centered experiences.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-800-ASP-FAST",
+      "contactType": "Customer Support",
+      "areaServed": "US",
+      "availableLanguage": ["English"]
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1 Premium Way",
+      "addressLocality": "Lux City",
+      "addressRegion": "CA",
+      "postalCode": "94000",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://www.instagram.com/astralux",
+      "https://twitter.com/astralux",
+      "https://www.youtube.com/astralux"
+    ]
+  }
+  </script>
+
+  <!-- Interactions & behavior -->
+  <script>
+    // Mobile drawer toggle for about page
+    const btnAbout = document.getElementById('mobile-menu-btn-about');
+    const drawerAbout = document.getElementById('mobile-drawer-about');
+    const overlayAbout = document.getElementById('drawer-overlay-about');
+    btnAbout && btnAbout.addEventListener('click', () => {
+      const isOpen = !drawerAbout.classList.contains('translate-x-full');
+      if (isOpen) {
+        drawerAbout.classList.add('translate-x-full');
+        overlayAbout.style.opacity = '0';
+        overlayAbout.style.pointerEvents = 'none';
+      } else {
+        drawerAbout.classList.remove('translate-x-full');
+        overlayAbout.style.opacity = '1';
+        overlayAbout.style.pointerEvents = 'auto';
+      }
+    });
+    overlayAbout && overlayAbout.addEventListener('click', () => {
+      drawerAbout.classList.add('translate-x-full');
+      overlayAbout.style.opacity = '0';
+      overlayAbout.style.pointerEvents = 'none';
+    });
+  </script>
+</body>
+</html>
