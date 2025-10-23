@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraLux – Premium Design-forward Technology</title>
+  <meta name="description" content="Premium, design-forward technology that blends extraordinary performance with human-centered experiences. AstraLux elevates everyday moments with luxury, trust, and innovation." />
+  <meta property="og:title" content="AstraLux – Premium Design-forward Technology" />
+  <meta property="og:description" content="Premium devices with exquisite design and real-world performance. Discover the AstraLux experience." />
+  <meta property="og:image" content="https://cdn.astralux.com/og-image.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0B3D91" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS (production-friendly with inline config) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#0B3D91',
+              50: '#e6f0ff',
+              100: '#cfe0ff',
+              200: '#97ccff',
+              300: '#5dbbff',
+              400: '#2da0ff',
+              500: '#0B3D91',
+              600: '#0A3578',
+              700: '#092658',
+              800: '#061733',
+              900: '#030d1a'
+            },
+            secondary: {
+              DEFAULT: '#1D2A60',
+              50: '#e9e6ff',
+              100: '#d8d0ff',
+              200: '#b2a1ff',
+              300: '#8a74ff',
+              400: '#6f4fff',
+              500: '#1D2A60',
+              600: '#1a2350',
+              700: '#141a3e',
+              800: '#0f1230',
+              900: '#070b20'
+            },
+            accent: {
+              DEFAULT: '#D4AF37',
+              50: '#fffaf0',
+              100: '#fff2cc',
+              200: '#ffd97b',
+              300: '#ffc23f',
+              400: '#f5a724',
+              500: '#D4AF37',
+              600: '#b08a2f',
+              700: '#8b6b28',
+              800: '#684e20',
+              900: '#4b3a19'
+            }
+          },
+          fontFamily: {
+            display: ['Inter', 'system-ui', 'sans-serif'],
+            heading: ['Inter', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif']
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            gradientShift: {
+              '0%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+              '100%': { backgroundPosition: '0% 50%' }
+            }
+          },
+          animation: {
+            'fade-in-up': 'fadeInUp 0.8s ease-out',
+            'gradient-shift': 'gradientShift 3s ease infinite'
+          }
+        }
+      },
+      darkMode: 'class'
+    }
+  </script>
+
+  <style>
+    /* Global utilities for the premium design system */
+    :root {
+      --gradient-primary: linear-gradient(135deg, #0B3D91 0%, #1D2A60 100%);
+      --aurora-gradient: linear-gradient(135deg, #1abc9c 0%, #8e44ad 50%, #f093fb 100%);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #0B3D91 0%, #1D2A60 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .glass {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: saturate(1.2) blur(8px);
+      -webkit-backdrop-filter: saturate(1.2) blur(8px);
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body class="antialiased bg-neutral-50 text-neutral-900">
+  <!-- Skip Link for accessibility -->
+  <a href="#content" class="sr-only focus:not-sr-only absolute left-4 top-4 z-50 p-2 bg-primary text-white rounded" aria-label="Skip to content">Skip to content</a>
+
+  <!-- Global: Sticky Glass Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-40" aria-label="Main navigation">
+    <nav id="site-nav" class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between bg-transparent transition-all duration-300">
+      <a href="index.html" class="text-2xl font-semibold tracking-tight gradient-text">
+        AstraLux
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#features" class="hover:text-primary transition-colors">Why AstraLux</a>
+        <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
+        <a href="#testimonials" class="hover:text-primary transition-colors">Testimonials</a>
+        <a href="#signup" class="bg-primary text-white px-5 py-2 rounded-full font-semibold hover:shadow-lg transition-all">Get Started</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden w-8 h-8 flex flex-col justify-between" aria-label="Open menu">
+        <span class="block h-0.5 bg-current"></span>
+        <span class="block h-0.5 bg-current"></span>
+        <span class="block h-0.5 bg-current"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div id="mobile-drawer" class="md:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-50" aria-label="Mobile navigation drawer">
+    <div class="p-6 space-y-4">
+      <a href="#features" class="block text-neutral-700 hover:text-primary">Why AstraLux</a>
+      <a href="#experience" class="block text-neutral-700 hover:text-primary">Experience</a>
+      <a href="#testimonials" class="block text-neutral-700 hover:text-primary">Testimonials</a>
+      <a href="#signup" class="block bg-primary text-white px-4 py-2 rounded-full">Get Started</a>
+    </div>
+  </div>
+  <div id="drawer-overlay" class="md:hidden fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true"></div>
+
+  <main id="content" class="pt-28">
+    <!-- HERO: full-bleed video with overlay -->
+    <section id="hero" aria-label="Hero" class="relative min-h-screen overflow-hidden bg-black/80">
+      <div class="absolute inset-0 z-0 overflow-hidden">
+        <video autoplay muted loop playsinline playsinline class="w-full h-full object-cover" src="https://cdn.astralux.com/hero-loop.webm" aria-label="Hero video background"></video>
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40"></div>
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center py-48 md:py-72">
+        <h1 class="text-white text-5xl md:text-7xl lg:text-8xl font-display font-extrabold tracking-tight gradient-text mb-6" style="--tw-text-opacity: 1;">Premium, design-forward technology that empowers everyday moments with unmatched clarity.</h1>
+        <p class="text-gray-100 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light">Elegant, high-performance devices that blend exquisite design with human-centered experiences.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#signup" class="inline-flex items-center justify-center bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300">Get Started</a>
+          <a href="#features" class="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">Learn More</a>
+        </div>
+      </div>
+      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/80" aria-label="Scroll to features">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- FEATURES (three-column grid) -->
+    <section id="features" aria-label="Why AstraLux" class="py-24 md:py-32 bg-white fade-in-section is-visible">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-heading font-bold mb-4">Why AstraLux</h2>
+          <p class="text-neutral-600 text-xl">Social proof and tangible benefits illuminate premium design and performance.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <article class="group bg-white rounded-2xl shadow-lg p-8 border border-neutral-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <div class="w-14 h-14 rounded-2xl mb-4 flex items-center justify-center bg-gradient-to-br from-primary to-secondary text-white">
+              <!-- Aurora Icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3L3 9l9 6 9-6-9-6z"/></svg>
+            </div>
+            <h3 class="text-2xl font-heading font-bold mb-2 text-neutral-900 group-hover:text-primary transition-colors">Aurora Gradient System</h3>
+            <p class="text-neutral-600 leading-relaxed mb-4">Dynamic gradients react to interaction, elevating key moments without distracting from content.</p>
+            <a href="#" class="text-primary font-semibold hover:underline">Learn more →</a>
+          </article>
+          <!-- Card 2 -->
+          <article class="group bg-white rounded-2xl shadow-lg p-8 border border-neutral-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <div class="w-14 h-14 rounded-2xl mb-4 flex items-center justify-center bg-gradient-to-br from-primary to-secondary text-white">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l9 4-9 4-9-4 9-4z"/><path d="M3 13l9 4 9-4-9-4-9 4z"/></svg>
+            </div>
+            <h3 class="text-2xl font-heading font-bold mb-2 text-neutral-900 group-hover:text-primary transition-colors">Glassmorphic Surfaces</h3>
+            <p class="text-neutral-600 leading-relaxed mb-4">Translucent surfaces with tactile depth and precise micro-animations for a premium feel.</p>
+            <a href="#" class="text-primary font-semibold hover:underline">Learn more →</a>
+          </article>
+          <!-- Card 3 -->
+          <article class="group bg-white rounded-2xl shadow-lg p-8 border border-neutral-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <div class="w-14 h-14 rounded-2xl mb-4 flex items-center justify-center bg-gradient-to-br from-primary to-secondary text-white">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 4v4c0 5-3 9-8 9s-8-4-8-9V7l8-4z"/><path d="M12 12l0 9"/></svg>
+            </div>
+            <h3 class="text-2xl font-heading font-bold mb-2 text-neutral-900 group-hover:text-primary transition-colors">Human-Centered Performance</h3>
+            <p class="text-neutral-600 leading-relaxed mb-4">Uncompromising power paired with intuitive, frictionless experiences.</p>
+            <a href="#" class="text-primary font-semibold hover:underline">Learn more →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" aria-label="Customer testimonials" class="py-24 md:py-32 bg-gradient-to-br from-neutral-50 to-neutral-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl md:text-5xl font-heading font-bold text-center mb-12">What Our Clients Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <blockquote class="bg-white/60 backdrop-blur-sm border border-white/20 rounded-2xl p-6 shadow-lg">
+            <p class="italic text-neutral-700">"AstraLux blends design elegance with real-world performance in a way that feels personal."</p>
+            <div class="mt-4 flex items-center gap-3">
+              <img src="https://cdn.astralux.com/avatars/customer1.jpg" alt="Alexis M. avatar" class="w-10 h-10 rounded-full" />
+              <div>
+                <strong>Alexis M.</strong>
+                <div class="text-sm text-neutral-600">Creative Director</div>
+              </div>
+            </div>
+          </blockquote>
+          <!-- Testimonial 2 -->
+          <blockquote class="bg-white/60 backdrop-blur-sm border border-white/20 rounded-2xl p-6 shadow-lg">
+            <p class="italic text-neutral-700">"The onboarding felt crafted for me. It’s luxury without the pretension."</p>
+            <div class="mt-4 flex items-center gap-3">
+              <img src="https://cdn.astralux.com/avatars/customer2.jpg" alt="Jordan P. avatar" class="w-10 h-10 rounded-full" />
+              <div>
+                <strong>Jordan P.</strong>
+                <div class="text-sm text-neutral-600">Product Manager</div>
+              </div>
+            </div>
+          </blockquote>
+          <!-- Testimonial 3 -->
+          <blockquote class="bg-white/60 backdrop-blur-sm border border-white/20 rounded-2xl p-6 shadow-lg">
+            <p class="italic text-neutral-700">"Reliability is undeniable. After-sales support is incredibly responsive."</p>
+            <div class="mt-4 flex items-center gap-3">
+              <img src="https://cdn.astralux.com/avatars/customer3.jpg" alt="Priya K. avatar" class="w-10 h-10 rounded-full" />
+              <div>
+                <strong>Priya K.</strong>
+                <div class="text-sm text-neutral-600">Tech Architect</div>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section id="signup" aria-label="Join AstraLux" class="bg-gradient-to-r from-primary to-secondary text-white py-20 md:py-28">
+      <div class="max-w-4xl mx-auto px-6 text-center space-y-6">
+        <h2 class="text-3xl md:text-4xl font-display font-bold">Join the AstraLux Experience</h2>
+        <p class="text-lg md:text-xl text-white/90">Sign up for exclusive access, configurator previews, and member-only content.</p>
+        <a href="#signup-form" class="inline-block bg-white text-primary px-8 py-4 rounded-full font-semibold text-lg shadow-lg">Get Started Now</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-neutral-900 text-white pt-16 pb-8" aria-label="Site footer">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="text-lg font-semibold mb-2">AstraLux</h4>
+          <p class="text-sm text-neutral-300">Premium, design-forward technology blending extraordinary performance with human-centered experiences.</p>
+        </div>
+        <div>
+          <h5 class="font-semibold mb-2">Explore</h5>
+          <ul class="space-y-2 text-sm text-neutral-300">
+            <li><a href="#features" class="hover:text-white">Why AstraLux</a></li>
+            <li><a href="#experience" class="hover:text-white">Experience</a></li>
+            <li><a href="#testimonials" class="hover:text-white">Testimonials</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-semibold mb-2">Support</h5>
+          <ul class="space-y-2 text-sm text-neutral-300">
+            <li><a href="#contact" class="hover:text-white">Contact</a></li>
+            <li><a href="#signup" class="hover:text-white">Get Started</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-semibold mb-2">Follow</h5>
+          <div class="flex space-x-3 mt-2">
+            <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full bg-neutral-800 hover:bg-primary flex items-center justify-center"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 5a5 5 0 11-0.001 10.001A5 5 0 0112 9zm0 2.5A2.5 2.5 0 1012 14a2.5 2.5 0 000-5z"/></svg></a>
+            <a href="#" aria-label="Twitter" class="w-10 h-10 rounded-full bg-neutral-800 hover:bg-primary flex items-center justify-center"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.88 3c-2.5 0-4.5 2-4.5 4.5 0 .35.04.69.12 1C7.69 8.89 4.1 7.13 2.2 4.5a4.52 4.52 0 00-.61 2.26c0 1.56.8 2.95 2.02 3.77A4.46 4.46 0 01.8 9v.06c0 2.18 1.56 4 3.64 4.41-.4.11-.82.17-1.26.17-.31 0-.62-.03-.92-.09.62 1.93 2.41 3.33 4.53 3.37A9 9 0 010 19.54 12 12 0 008.29 21c7.55 0 11.68-6.25 11.68-11.68 0-.18-.01-.36-.02-.54A8.36 8.36 0 0023 3z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-neutral-700 mt-6 pt-6 text-center text-sm text-neutral-400">© 2025 AstraLux. All rights reserved.</div>
+    </footer>
+  </main>
+
+  <!-- JSON-LD LocalBusiness / Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Corporation", "LocalBusiness"],
+    "name": "AstraLux",
+    "url": "https://www.astralux.com/",
+    "logo": "https://cdn.astralux.com/logo.png",
+    "description": "Premium, design-forward technology that blends extraordinary performance with human-centered experiences.",
+    "sameAs": [
+      "https://www.instagram.com/astralux",
+      "https://twitter.com/astralux",
+      "https://www.youtube.com/astralux"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-800-ASP-FAST",
+      "contactType": "Customer Support",
+      "areaServed": "US",
+      "availableLanguage": ["English"]
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1 Premium Way",
+      "addressLocality": "Lux City",
+      "addressRegion": "CA",
+      "postalCode": "94000",
+      "addressCountry": "US"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "128"
+    }
+  }
+  </script>
+
+  <!-- Performance + Interactions -->
+  <script>
+    // Intersection Observer for fade-in sections
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, observerOptions);
+    document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+
+    // Navbar scroll effect
+    const nav = document.getElementById('site-nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        nav.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-md');
+      } else {
+        nav.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-md');
+      }
+    });
+
+    // Mobile menu toggle
+    const btn = document.getElementById('mobile-menu-btn');
+    const drawer = document.getElementById('mobile-drawer');
+    const overlay = document.getElementById('drawer-overlay');
+    btn && btn.addEventListener('click', () => {
+      const isOpen = !drawer.classList.contains('translate-x-full');
+      if (isOpen) {
+        drawer.classList.add('translate-x-full');
+        overlay.style.opacity = '0';
+        overlay.style.pointerEvents = 'none';
+      } else {
+        drawer.classList.remove('translate-x-full');
+        overlay.style.opacity = '1';
+        overlay.style.pointerEvents = 'auto';
+      }
+    });
+    overlay && overlay.addEventListener('click', () => {
+      drawer.classList.add('translate-x-full');
+      overlay.style.opacity = '0';
+      overlay.style.pointerEvents = 'none';
+    });
+  </script>
+</body>
+</html>
